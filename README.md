@@ -21,6 +21,9 @@
 - If token is not present, can't go to any page, redirect to login page
 - Cannot access other pages without login
 - Conditional navbar based on login status
+- Logout feature
+- Get the feed and save it in redux store
+- Built the user card on feed
 
 Body
     NavBar
