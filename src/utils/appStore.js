@@ -3,6 +3,7 @@ import userReducer from "./userSlice"
 import feedReducer from "./feedSlice"
 import navbarReducer from "./navbarSlice"
 import connectionReducer from "./connectionsSlice"
+import requestsReducer from "./requestsSlice"
 
 const store = configureStore(
 {
@@ -10,7 +11,8 @@ const store = configureStore(
         user: userReducer,
         feed: feedReducer,
         navbar: navbarReducer,
-        connections: connectionReducer
+        connections: connectionReducer,
+        requests: requestsReducer
     },
 })
 

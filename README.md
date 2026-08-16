@@ -27,6 +27,9 @@
 - Edit profile page
 - Alert on success or failure on saving edit profile
 - Displaying all connections
+- Display all connection Requests
+- feature to accept/reject connections
+- Send/ignore the profiles on the feed
 
 Body
     NavBar

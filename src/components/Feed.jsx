@@ -27,6 +27,15 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if(!feed) return;
+
+  if(feed.length <=0) {
+    return (
+      <div className="min-h-[calc(100vh-4rem)]">
+       <h2 className="text-center text-2xl font-bold m-auto">No more Users!</h2>
+      </div>
+    );
+  }
   return feed &&(
     <div className="min-h-[calc(100vh-4rem)]">
       <div className="flex justify-center">
