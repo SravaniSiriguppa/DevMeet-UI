@@ -6,6 +6,7 @@ import { removeUser } from "../utils/userSlice";
 
 const Navbar = () => {
   const user = useSelector((store) => store.user);
+  // const savedProfile = useSelector((store) => store.navbar)
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -15,7 +16,6 @@ const Navbar = () => {
       dispatch(removeUser());
       navigate("/login");
     } catch (err) {
-      console.log(err);
       navigate("/error");
     }
   };
@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
       </div>
       {user && (
-        <div className="flex-none gap-2">
+        <div className="relative flex-none gap-2">
           <div> Welcome {user.firstName} </div>
           <div className="dropdown dropdown-end flex justify-between">
             <div
@@ -40,7 +40,7 @@ const Navbar = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src={user.photoUrl}
                 />
               </div>
             </div>
@@ -55,13 +55,34 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link to='/connections'>Connections</Link>
               </li>
               <li>
                 <a onClick={handleLogout}>Logout</a>
               </li>
             </ul>
           </div>
+          {/* {savedProfile && (
+          <div
+            role="alert"
+            className="absolute alert alert-success top-14 right-2 w-[min(20rem,calc(100vw-1rem))]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 shrink-0 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>Your profile has been updated!!</span>
+          </div>
+        )} */}
         </div>
       )}
     </div>

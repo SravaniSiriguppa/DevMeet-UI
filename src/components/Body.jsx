@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL } from "../utils/constants";
 import axios from "axios";
 import { addUser } from "../utils/userSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const userData = useSelector((store) => store.user)
+  const [loading, setLoading] = useState(true);
 
   const fetchUser = async () => {
     try {
@@ -28,12 +29,20 @@ const Body = () => {
         return
       }
       navigate('/error')
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     fetchUser();
   }, []);
+
+  if(loading) {
+    return (
+      <div> <h2>Loading....</h2> </div>
+    )
+  }
 
   return (
     <div className="flex flex-col">

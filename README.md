@@ -24,6 +24,9 @@
 - Logout feature
 - Get the feed and save it in redux store
 - Built the user card on feed
+- Edit profile page
+- Alert on success or failure on saving edit profile
+- Displaying all connections
 
 Body
     NavBar
