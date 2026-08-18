@@ -30,6 +30,7 @@
 - Display all connection Requests
 - feature to accept/reject connections
 - Send/ignore the profiles on the feed
+- Added Forgot and reset password logic
 
 Body
     NavBar
