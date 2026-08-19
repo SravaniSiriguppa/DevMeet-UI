@@ -52,8 +52,8 @@ const EditProfile = () => {
 
   if (!user) {
     return (
-      <div>
-        <h2> Loading... </h2>
+      <div className="min-h-[calc(100vh-4rem)]">
+        <h2>Loading....</h2>
       </div>
     );
   }

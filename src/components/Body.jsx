@@ -40,7 +40,9 @@ const Body = () => {
 
   if(loading) {
     return (
-      <div> <h2>Loading....</h2> </div>
+      <div className="min-h-[calc(100vh-4rem)]">
+        <h2>Loading....</h2>
+      </div>
     )
   }
 
