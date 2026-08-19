@@ -24,7 +24,9 @@ const Connections = () => {
   }, []);
 
   if (!connections) {
-    return <div> Loading... </div>;
+    return (
+      <div className="min-h-[calc(100vh-4rem)]"> Loading... </div>
+    )
   }
 
   if (connections.length === 0) {

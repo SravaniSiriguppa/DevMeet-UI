@@ -27,7 +27,9 @@ const Feed = () => {
     getFeed();
   }, []);
 
-  if(!feed) return;
+  if(!feed) {
+    return <div className="min-h-[calc(100vh-4rem)]"></div>
+  };
 
   if(feed.length <=0) {
     return (

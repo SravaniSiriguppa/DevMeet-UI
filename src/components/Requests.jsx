@@ -36,7 +36,10 @@ const Requests = () => {
     fetchRequests();
   }, []);
 
-  if (!requests) return;
+  if (!requests) {
+    return <div className="min-h-[calc(100vh-4rem)]"></div>
+  };
+
   if (requests.length === 0) {
     return (
       <div className="min-h-[calc(100vh-4rem)]">
