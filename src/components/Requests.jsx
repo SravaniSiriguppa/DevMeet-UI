@@ -58,7 +58,7 @@ const Requests = () => {
               key={_id}
               className="flex p-4 rounded-lg bg-base-300 w-1/2 my-2 mx-auto"
             >
-              <div className="p-4 w-4/6">
+              <div className="p-4 shrink-0">
                 <img
                   alt="user-photo"
                   className="w-[220px] h-[220px] rounded-full object-cover"
