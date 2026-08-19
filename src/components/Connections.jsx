@@ -48,8 +48,7 @@ const Connections = () => {
               <div className="p-4">
                 <img
                   alt="user-photo"
-                  // className="w-[120px] h-[120px] rounded-full object-cover"
-                  className="w-[220px] h-[220px] rounded-full"
+                  className="w-[220px] h-[220px] rounded-full object-cover"
                   src={photoUrl}
                 />
               </div>
